@@ -1,0 +1,15 @@
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: null
+global:
+  evaluation_interval: 15s
+  scrape_interval: 15s
+rule_files: null
+scrape_configs:
+- file_sd_configs:
+  - files:
+    - /data/prom_config/node_exporter/*.json
+    refresh_interval: 1m
+  job_name: node_exporter
+  metrics_path: /metrics

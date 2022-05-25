@@ -1,0 +1,103 @@
+org_class: deploy_config_org
+package_config:
+  database_url: '10.1.69.43:27017'
+  database_username: 'admin'
+  database_password: '123456'
+  deploy_platform_file_path:
+    path: '/home/'
+    deploy_config: 'deploy_platform_config'
+    dockerfile: 'dockerfile'
+    images: 'deploy_file/images'
+    docker_install: 'file/system/centos/docker/7'
+  package_file_path:
+    path: '/home/deploy_file/project/'
+database:
+  redis:
+    ip: 10.1.69.43
+    port: 6379
+    password: 123456
+  mongodb:
+    ip: 10.1.69.43
+    port: 27017
+    username: admin
+    password: 123456
+path:
+  base_path: '/home/project/'
+  base_path_test: '/Users/chenchen/PycharmProjects/deploy_platform/'
+  agent_path: 'agent/'
+  prometheus_path: 'prometheus'
+  images_path: 'docker/images/'
+  dockerfile_path: 'docker/dockerfile/'
+  soft_path: 'soft/'
+deploy_config:
+  package_no: 'aiops-001-1_0'
+  version_no: '1_0'
+  product_name: 'aiops'
+  project_no: '001'
+  deploy_path: '/home/ssd'
+  project_topo:
+      -
+        ip: '10.1.1.1'
+        soft_list:
+          - 'redis'
+          - 'nginx'
+          - 'aiops_core'
+      -
+        ip: '10.1.1.2'
+        soft_list:
+          - 'aiops_handler'
+          - 'kdb'
+  images_config:
+    aiops_ai:
+      v:
+        - 'aiops_ai:/home/eb_aiops_flask'
+      p:
+        - '8030:8080'
+    aiops_core:
+      v:
+        - 'aiops_core:/home/eb_aiops_flask'
+      p:
+        - '8040:8080'
+    aiops_handler:
+      v:
+        - 'aiops_handler:/home/eb_aiops_flask'
+      p:
+        - '8020:8080'
+    cassandra:
+      v: ''
+      p:
+        - '9042:9042'
+    kdb:
+      v: ''
+      p:
+        - '8010:8080'
+    mongo:
+      v: ''
+      p:
+        - '27017:27017'
+    redis:
+      v: ''
+      p:
+        - '6379:6379'
+    nginx:
+      v:
+        - 'aiops_web:/usr/share/nginx/html'
+      p:
+        - '8050:80'
+    aiops_collector:
+      v: 'aiops_collector:/home/project'
+      p: ''
+  container_start_num:
+    '1':
+      - 'cassandra'
+      - 'mongo'
+      - 'kdb'
+      - 'redis'
+    '2':
+      - 'aiops_ai'
+      - 'aiops_core'
+      - 'aiops_handler'
+      - 'nginx'
+    '3':
+      - 'aiops_collector'
+

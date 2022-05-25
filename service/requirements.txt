@@ -1,0 +1,9 @@
+Flask==1.1.2
+Flask-Cors==3.0.8
+flask-restplus==0.13.0
+pyyaml
+pymongo
+paramiko
+redis
+python-crontab==2.6.0
+apscheduler
