@@ -1,0 +1,115 @@
+var nav=[
+{
+    item_class:'first_item',
+    name:'首页',
+    icon_name:'el-icon-s-home',
+    path:'/dashboard'
+},
+{
+    item_class:'first_menu',
+    name:'项目部署',
+    icon_name:'el-icon-menu',
+    path:'/project_deploy',
+    children:[
+        {
+            item_class:'second_item',
+            name:'部署列表',
+            icon_name:'el-icon-document',
+            path:'/deploy_list'
+        }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'docker镜像管理',
+    icon_name:'el-icon-location',
+    path:'/docker_manager',
+    children:[
+        {
+            item_class:'second_item',
+            name:'镜像列表',
+            icon_name:'el-icon-document',
+            path:'/images_list'
+        },
+        {
+            item_class:'second_item',
+            name:'新建镜像',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/images_manager'
+        }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'指标管理',
+    icon_name:'el-icon-location',
+    path:'/target_manager',
+    children:[
+        {
+            item_class:'second_item',
+            name:'图表管理',
+            icon_name:'el-icon-document',
+            path:'/chart_manager'
+        },
+        {
+            item_class:'second_item',
+            name:'指标管理',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/target_list'
+        },
+        {
+            item_class:'second_item',
+            name:'图表展示',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/chart_list'
+        },
+        {
+            item_class:'second_item',
+            name:'指标中心',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/target_center'
+        }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'主机管理',
+    icon_name:'el-icon-location',
+    path:'/computer_manager',
+    children:[
+        {
+            item_class:'second_item',
+            name:'主机列表',
+            icon_name:'el-icon-document',
+            path:'/computer_list'
+        },
+        {
+            item_class:'second_item',
+            name:'主机实时状态监控',
+            icon_name:'el-icon-document',
+            path:'/computer_agent'
+        }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'应用管理',
+    icon_name:'el-icon-location',
+    path:'/docker_manager',
+    children:[
+        {
+            item_class:'second_item',
+            name:'镜像列表',
+            icon_name:'el-icon-document',
+            path:'/images_list'
+        },
+        {
+            item_class:'second_item',
+            name:'新建镜像',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/images_manager'
+        }
+    ]
+},
+]
+export default nav
