@@ -19,23 +19,27 @@ Agent：node_exporter，redis_exporter,mysql_exporter
 #### 安装教程
 
 1. 安装docker  
-centos:yum install docker
-ubuntu:apt-get install docker.io
-2. clone项目：
-git clone:
-3. 导入镜像
+`centos:yum install docker`  
+`ubuntu:apt-get install docker.io`  
+2. clone项目：  
+`git clone:`  
+3. 导入镜像  
+```commandline
 cd ado
 docker load<images/prom
 docker load<images/service
 docker load<images/web
 docker load<images/scheduler
 docker load<images/mongodb
+```
 4. 运行镜像：
+```commandline
 docker run -itd --name service -p 8090:8040 -v /data/ado:/home/project -e "local_ip='本机ip'" service
 docker run -itd --name promethus -p 9010:9010 -v /data/ado/promethus/config:/etc/promethus/config/ prom
 docker run -itd --name web -p 8080:80 web
 docker run -itd --name ado_scheduler -e "local_ip='本机ip'" scheduler
 docker run -itd --name mongo -p 27017:27017 mongo --auth
+```
 5. 然后访问本机地址：8080即可
 
 
