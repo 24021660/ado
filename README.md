@@ -18,7 +18,7 @@ Agent：node_exporter，redis_exporter,mysql_exporter
 
 #### 安装教程
 
-1. 安装docker
+1. 安装docker  
 centos:yum install docker
 ubuntu:apt-get install docker.io
 2. clone项目：
