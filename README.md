@@ -44,7 +44,8 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 
 
 #### 使用说明
-
+整体功能图：  
+![img_1.png](img_1.png)
 1. 主机纳管功能
 说明：主要是通过ip，后台通过ssh进行登录验证，在此过程中部署agent和自动登录的功能。
 添加主机：
