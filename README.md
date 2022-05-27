@@ -58,7 +58,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 2. 指标监控  
 已经通过纳管的主机可以查看node_exporter中所有的指标  
 (1)图表管理  
-`指标管理->图表管理`  
+$\color{#FF0000}{`指标管理->图表管理`}$  
 可以定义需要展示的图表，例如该图表展示周期，时长 
 ![img_5.png](doc_file/img_5.png)
 (2)指标配置  
