@@ -1,12 +1,12 @@
 # ADo
-
+***
 #### 介绍
 
 ADO(Automatic DevOps) 是基于python与vue开发的自动化运维平台。专为运维人员提供稳定、高效、安全的自动运维功能平台。
 无论是个人、团队、或是企业，都能够用ado实现主机纳管、docker安装部署、指标监控，自动脚本执行等功能。
-demo地址：
-http://218.0.61.197:9080/
+demo地址：[ADo主页](http://218.0.61.197:9080/)
 
+***
 #### 软件架构
 软件架构说明
 前端：vue+element
@@ -15,7 +15,7 @@ http://218.0.61.197:9080/
 数据库：mongodb，Prometheus
 Agent：node_exporter，redis_exporter,mysql_exporter
 ![img.png](doc_file/img.png)
-
+***
 #### 安装教程
 
 1. 安装docker  
@@ -42,7 +42,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 ```
 5. 然后访问本机地址：8080即可
 
-
+***
 #### 使用说明
 整体功能图：  
 ![img_1.png](doc_file/img_1.png)
@@ -58,7 +58,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 2. 指标监控  
 已经通过纳管的主机可以查看node_exporter中所有的指标  
 (1)图表管理  
-<table><tr><td bgcolor="#f4cccc">$\color{#FF0000}{指标管理->图表管理}$</td>></tr>></table>
+`指标管理->图表管理`  
 可以定义需要展示的图表，例如该图表展示周期，时长
 ![img_5.png](doc_file/img_5.png)  
 (2)指标配置  
@@ -89,7 +89,8 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 （3）task定时任务  
 `自动运维->定时任务` 
 通过设置task的执行周期（一次，或者定时，或者循环多次），来执行workflow或者service。  
-![img_10.png](doc_file/img_10.png)
+![img_10.png](doc_file/img_10.png)  
+***
 #### 参与贡献
 
 1. 本项目诞生于2021年底，前期作者tony：陈晨，主要把1.0版本的总体框架以及前后端基本功能（主机纳管，docker管理，指标监控等）实现。
