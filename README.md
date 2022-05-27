@@ -5,7 +5,7 @@
 ADO(Automatic DevOps) 是基于python与vue开发的自动化运维平台。专为运维人员提供稳定、高效、安全的自动运维功能平台。
 无论是个人、团队、或是企业，都能够用ado实现主机纳管、docker安装部署、指标监控，自动脚本执行等功能。
 demo地址：
-http://1.116.187.175:8080
+http://218.0.61.197:9080/
 
 #### 软件架构
 软件架构说明
@@ -52,16 +52,16 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 说明：主要是通过ip，后台通过ssh进行登录验证，在此过程中部署agent和自动登录的功能。通过主机列表页面点击`新增`添加对应的主机实例名称，ip地址，ssh用户名，ssh密码，以及操作初始工作区路径,点击保存即可。  
 ![img_2.png](doc_file/img_2.png)
 （2）主机信息查询  
-`主机纳管->主机实时状态监控`
+`主机纳管->主机实时状态监控`  
 主机添加完成后，后台会验证ssh的准确性，同时将该主机监管起来，可以在界面中查看主机的具体信息，以及当前状态。
 ![img_3.png](doc_file/img_3.png)
 2. 指标监控  
 已经通过纳管的主机可以查看node_exporter中所有的指标  
-(1)图表管理
+(1)图表管理  
 `指标管理->图表管理`  
 可以定义需要展示的图表，例如该图表展示周期，时长 
 ![img_5.png](doc_file/img_5.png)
-(2)指标配置
+(2)指标配置  
 `指标管理->指标定义`  
 可以配置需要采集的指标，通过prometheus指标采集语句定义需要采集指标的名称映射,以及该指标需要展示在哪张图表中
 ![img_4.png](doc_file/img_4.png)
@@ -83,9 +83,11 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 通过设置service相关的属性，如service名称，分类（shell语句还是执行脚本文件），执行语句，上传脚本文件。  
 ![img_8.png](doc_file/img_8.png)  
 （2）workflow工作流  
+`自动运维->workflow工作流` 
 通过设置workflow相关的属性，如workflow名称，详情等，可以定义在某项task中第一步在哪台主机上执行什么，第二步在哪台主机上执行什么。  
 ![img_9.png](doc_file/img_9.png) 
 （3）task定时任务  
+`自动运维->定时任务` 
 通过设置task的执行周期（一次，或者定时，或者循环多次），来执行workflow或者service。  
 ![img_10.png](doc_file/img_10.png)
 #### 参与贡献
