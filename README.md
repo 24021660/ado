@@ -77,6 +77,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 4. 项目部署(开发中)  
 通过填写项目信息，集群信息，可以向多个集群主机分步骤安装相关的docker应用形成自动化部署，目前只支持通过配置文件生成tar包线下部署。后期会上线线上部署，将纳管的主机随时部署docker镜像以及安装。  
 5. 自动运维  
+![img.png](doc_file/img_11.png)  
 通过设定最小单位（service即脚本和shell），workflow（多台主机跟多种shell组合），通过task任务界面将service和workflow执行起来，可以实现定时执行或者一次执行等。  
 （1）运维脚本  
 `自动运维->运维脚本`  
