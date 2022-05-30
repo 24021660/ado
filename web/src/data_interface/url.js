@@ -1,4 +1,4 @@
-var url='http://10.1.69.43:8090'
+var url=window.dict.url
 var package_config_list='/package_config/package_config_load'
 var target_url='/target_config/target_list'
 var data_query_url='/dataquery'

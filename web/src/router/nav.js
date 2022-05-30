@@ -7,35 +7,21 @@ var nav=[
 },
 {
     item_class:'first_menu',
-    name:'项目部署',
-    icon_name:'el-icon-menu',
-    path:'/project_deploy',
-    children:[
-        {
-            item_class:'second_item',
-            name:'部署列表',
-            icon_name:'el-icon-document',
-            path:'/deploy_list'
-        }
-    ]
-},
-{
-    item_class:'first_menu',
-    name:'docker镜像管理',
+    name:'主机管理',
     icon_name:'el-icon-location',
-    path:'/docker_manager',
+    path:'/computer_manager',
     children:[
         {
             item_class:'second_item',
-            name:'镜像列表',
+            name:'主机列表',
             icon_name:'el-icon-document',
-            path:'/images_list'
+            path:'/computer_list'
         },
         {
             item_class:'second_item',
-            name:'新建镜像',
-            icon_name:'el-icon-circle-plus-outline',
-            path:'/images_manager'
+            name:'主机实时状态监控',
+            icon_name:'el-icon-document',
+            path:'/computer_agent'
         }
     ]
 },
@@ -73,22 +59,63 @@ var nav=[
 },
 {
     item_class:'first_menu',
-    name:'主机管理',
-    icon_name:'el-icon-location',
-    path:'/computer_manager',
+    name:'项目部署',
+    icon_name:'el-icon-menu',
+    path:'/project_deploy',
     children:[
         {
             item_class:'second_item',
-            name:'主机列表',
+            name:'部署列表',
             icon_name:'el-icon-document',
-            path:'/computer_list'
+            path:'/deploy_list'
+        }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'docker镜像管理',
+    icon_name:'el-icon-location',
+    path:'/docker_manager',
+    children:[
+        {
+            item_class:'second_item',
+            name:'镜像列表',
+            icon_name:'el-icon-document',
+            path:'/images_list'
         },
         {
             item_class:'second_item',
-            name:'主机实时状态监控',
-            icon_name:'el-icon-document',
-            path:'/computer_agent'
+            name:'新建镜像',
+            icon_name:'el-icon-circle-plus-outline',
+            path:'/images_manager'
         }
+    ]
+},
+
+{
+    item_class:'first_menu',
+    name:'自动运维',
+    icon_name:'el-icon-location',
+    path:'/automation',
+    children:[
+        {
+            item_class:'second_item',
+            name:'运维脚本',
+            icon_name:'el-icon-document',
+            path:'/ado_service'
+        },
+        {
+            item_class:'second_item',
+            name:'workflow工作流',
+            icon_name:'el-icon-document',
+            path:'/ado_workflow'
+        },
+        {
+            item_class:'second_item',
+            name:'定时任务',
+            icon_name:'el-icon-document',
+            path:'/task'
+        },
     ]
 },
 {
@@ -109,6 +136,20 @@ var nav=[
             icon_name:'el-icon-circle-plus-outline',
             path:'/images_manager'
         }
+    ]
+},
+{
+    item_class:'first_menu',
+    name:'测试页面',
+    icon_name:'el-icon-location',
+    path:'/test',
+    children:[
+        {
+            item_class:'second_item',
+            name:'测试页面1',
+            icon_name:'el-icon-document',
+            path:'/test_page'
+        },
     ]
 },
 ]

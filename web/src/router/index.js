@@ -13,6 +13,10 @@ import dashboard from '@/components/dashboard/dashboard'
 import computer_list from '@/components/computer_manager/computer_list'
 import computer_agent from '@/components/computer_manager/computer_agent'
 import target_center from '@/components/target_manager/target_center'
+import task from '@/components/automation/task'
+import ado_service from '@/components/automation/ado_service'
+import ado_workflow from '@/components/automation/ado_workflow'
+import test_page from '@/components/test/test_page'
 import { path } from 'chromedriver'
 
 Vue.use(Router)
@@ -78,6 +82,23 @@ export default new Router({
           name: 'target_center',
           component: target_center,
         },
+        {
+          path: '/automation/ado_service',
+          name: 'ado_service',
+          component: ado_service,
+        },
+        {
+          path: '/automation/task',
+          name: 'task',
+          component: task,
+        },{
+          path: '/automation/ado_workflow',
+          name: 'ado_workflow',
+          component: ado_workflow,
+        },
+        {path: '/test/test_page',
+        name: 'test_page',
+        component: test_page,}
       ]
     },
     {
