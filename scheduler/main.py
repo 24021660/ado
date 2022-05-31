@@ -24,6 +24,9 @@ def get_interface(url):
     res=requests.get(url).text
     print(res)
 
+def base_task():
+    print('基础任务运行中')
+
 def job_class_add(task_class,unit,period,task_name,task_id):
     if task_class=='interval':
         sched.add_job(get_interface,i['task_class'],seconds=trans_second(unit,period),args=[interface_url+'?task_id='+task_id],name=task_name,id=task_id)
@@ -58,7 +61,7 @@ del_list=[]
 for i in sched.get_jobs():
     job_list.append((i.id))
 
-
+sched.add_job(base_task, 'interval', days=1, name='base_task', id='0001')
 
 sched.start()
 
@@ -75,11 +78,10 @@ while(True):
             job_list.append(i['_id']['$oid'])
     del_list=[i for i in job_list if i not in add_list]
     if len(del_list)>0:
+        if job_list==del_list:
+            job_class_add
         for i in del_list:
             sched.remove_job(i)
             print('删除任务成功,id:'+i)
-    print(job_list)
-    print(add_list)
-    print(del_list)
-    print(sched.get_jobs())
+
     time.sleep(10)
