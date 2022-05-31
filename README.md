@@ -103,8 +103,8 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 （2）workflow工作流  
 `自动运维->workflow工作流`  
 通过设置workflow相关的属性，如workflow名称，详情等，可以定义在某项task中第一步在哪台主机上执行什么，第二步在哪台主机上执行什么。  
-![img_9.png](doc_file/img_9.png) 
-![img.png](doc_file/img_13.png)
+![img_9.png](doc_file/img_9.png)   
+![img.png](doc_file/img_13.png)  
 （3）task定时任务  
 `自动运维->定时任务`  
 通过设置task的执行周期（一次，或者定时，或者循环多次），来执行workflow或者service。  
