@@ -1,4 +1,4 @@
-import pymongo,requests,json,time
+import pymongo,requests,json,time,traceback
 from bson.json_util import dumps
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -72,16 +72,20 @@ while(True):
     add_list=[]
     del_list=[]
     for i in res:
-        add_list.append(i['_id']['$oid'])
-        if i['_id']['$oid'] not in job_list:
-            job_class_add(i['task_class'], i['unit'], i['period'], i['task_name'], i['_id']['$oid'])
-            job_list.append(i['_id']['$oid'])
+        if i['task_class']=='interval':
+            add_list.append(i['_id']['$oid'])
+            if i['_id']['$oid'] not in job_list:
+                job_class_add(i['task_class'], i['unit'], i['period'], i['task_name'], i['_id']['$oid'])
+                job_list.append(i['_id']['$oid'])
     del_list=[i for i in job_list if i not in add_list]
     if len(del_list)>0:
         if job_list==del_list:
             job_class_add
         for i in del_list:
-            sched.remove_job(i)
-            print('删除任务成功,id:'+i)
+            try:
+                sched.remove_job(i)
+                print('删除任务成功,id:'+i)
+            except:
+                print("错误："+str(traceback.format_exc()))
 
     time.sleep(10)

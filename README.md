@@ -73,6 +73,10 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 `指标管理->指标定义`  
 可以配置需要采集的指标，通过prometheus指标采集语句定义需要采集指标的名称映射,以及该指标需要展示在哪张图表中
 ![img_4.png](doc_file/img_4.png)
+（3）指标展示
+`指标管理->图表展示`
+根据在图表管理与指标配置中配置好的相关指标，进行相应的指标展示，例如cpu指标，以及内存指标等。
+![img.png](doc_file/img_12.png)
 3. docker管理部署  
 （1）新建镜像  
 `docker镜像管理->新建镜像`  
@@ -95,6 +99,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 `自动运维->workflow工作流`  
 通过设置workflow相关的属性，如workflow名称，详情等，可以定义在某项task中第一步在哪台主机上执行什么，第二步在哪台主机上执行什么。  
 ![img_9.png](doc_file/img_9.png) 
+![img.png](doc_file/img_13.png)
 （3）task定时任务  
 `自动运维->定时任务`  
 通过设置task的执行周期（一次，或者定时，或者循环多次），来执行workflow或者service。  
