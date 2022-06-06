@@ -31,6 +31,9 @@ export default {
       msg: "Welcome to Your Vue.js App",
     };
   },
+  mounted(){
+    this.$router.push('/dashboard')
+  }
 };
 </script>
 

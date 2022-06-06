@@ -29,8 +29,9 @@ Agent：node_exporter，redis_exporter,mysql_exporter
 1. 安装docker  
 `centos:yum install docker`  
 `ubuntu:apt-get install docker.io`  
-2. clone项目：  
-`git clone:`  
+2. 下载项目（v1.0.1）：  
+链接：[百度网盘](https://pan.baidu.com/s/1yRhpZK3Vz8YnGb3M6yxPKQ)  
+提取码：jghd     
 3. 导入镜像  
 ```commandline
 cd ado
